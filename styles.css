@@ -37,18 +37,12 @@ p {
     font-family: 'Gabarito', sans-serif;
     font-size: 17px;
 }
-.embed {
-    display: flex;
-    overflow: hidden;
-    height: auto;
-    width: 100%; 
-    min-height: 100%;
+.highlights {
+    color: crimson;
 }
-embed {
-    display: flex;
-    width: 100%; 
-    height:100vh;
-    overflow: hidden;
+.quote {
+    font-size: .5em;
+    opacity: .5;
 }
 .reveal {
     opacity: 0;
@@ -444,7 +438,8 @@ embed {
     display: flex;
     justify-content: left;
     padding-right: 50px;
-    width: 30%;
+    width: 50%;
+    min-width: 350px;
 }
 .inner-container.title h2 {
     text-decoration:underline 1px;
@@ -454,6 +449,7 @@ embed {
 
 .inner-container.description {
     display: flex;
+    width: 100%;
     justify-content: left;
 }
 .inner-container.image img {
@@ -493,6 +489,9 @@ embed {
     transition: .3s ease-in-out ;
 }
 @media only screen and (max-width: 900px) {
+    .intro-text h2 {
+        font-size: 30px;
+    }
     .columns-container {
         display: block;
     }
@@ -504,6 +503,7 @@ embed {
         padding-right: 0;
     }
     .inner-container.title {
+        min-width: 0;
         padding-right: 0;
         width: 100%;
         justify-content: center;
@@ -761,6 +761,9 @@ embed {
     .inner-portfolio.text {
         max-width: none;
     }
+    .portfolio-piece {
+        min-width: 0;
+    }
     .portfolio-piece-description {
         min-width: 0;
         width: 80%;
@@ -794,12 +797,9 @@ embed {
     position: relative;
     float: left;
     display: flex;
-    animation: slide-animation 15s ease-in-out infinite;
+    animation: slide-animation 15000ms ease infinite;
     animation-delay: 1.5s;
     transition: ease-in-out;
-}
-.image-list:hover {
-    animation-play-state:paused;
 }
 .subtitle {
     display: flex;
@@ -840,8 +840,7 @@ embed {
 }
 
 @media only screen and (max-width: 900px) {
-    .image-item-1 img {
-        left: -20%;
+    .image-item-1 img{
         width: 900px;
     }
     .image-list {
